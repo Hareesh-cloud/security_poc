@@ -13,7 +13,7 @@ import subprocess
 import json
 import shlex
 
-project_list_command = "gcloud beta logging buckets describe my-bucket789 --location=global --format=json"
+project_list_command = "gcloud beta logging buckets describe my_logs_bucket --location=global --format=json"
 
 #print(type(project_list_command))
 project_output = subprocess.check_output(shlex.split(project_list_command))

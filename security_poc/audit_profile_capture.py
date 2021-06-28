@@ -4,11 +4,12 @@ import subprocess
 
 #refer //cloud.google.com/logging/docs/quickstart-sdk
 #refer //cloud.google.com/logging/docs/audit
+"""
 # bucket creation
-cmd1= "gcloud logging buckets create my-bucket789 --location global --description 'My first bucket789'"
+cmd1= "gcloud logging buckets create my_logs_bucket --location global --description 'my_logs_bucket'"
 proc = subprocess.Popen(cmd1, stdout=subprocess.PIPE, shell=True)
-
-cmd= "gcloud logging read 'resource.type=global'  --project=hpc-lab-316407"
+"""
+cmd= "gcloud logging read resource.type=global --project=decent-habitat-315907"
 proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
 (out, err) = proc.communicate()
 
